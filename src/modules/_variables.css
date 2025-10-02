@@ -1,0 +1,94 @@
+:root {
+    /* --------------------------------- */
+    /* Typography
+    /* --------------------------------- */
+    --line-height-base: 1.6;
+    --font-family-base: "Noto Sans KR", sans-serif;
+    --font-size-base: 1rem;
+
+    --typographic-ratio: 1.25;
+    --font-size-sm: calc(var(--font-size-base) / var(--typographic-ratio));
+    --font-size-md: var(--font-size-base);
+    --font-size-lg: calc(var(--font-size-base) * var(--typographic-ratio));
+    --font-size-2lg: calc(var(--font-size-lg) * var(--typographic-ratio));
+    --font-size-3lg: calc(var(--font-size-2lg) * var(--typographic-ratio));
+    --font-size-4lg: calc(var(--font-size-3lg) * var(--typographic-ratio));
+    --font-size-5lg: calc(var(--font-size-4lg) * var(--typographic-ratio));
+    --font-size-6lg: calc(var(--font-size-5lg) * var(--typographic-ratio));
+
+    /* --------------------------------- */
+    /* Color Palette
+    /* --------------------------------- */
+    --color-neutral-50:  #ffffff;
+    --color-neutral-100: #fafafa;
+    --color-neutral-200: #f4f4f5;
+    --color-neutral-300: #e4e4e7;
+    --color-neutral-400: #d4d4d8;
+    --color-neutral-500: #a1a1aa;
+    --color-neutral-600: #71717a;
+    --color-neutral-700: #52525b;
+    --color-neutral-800: #3f3f46;
+    --color-neutral-900: #27272a;
+
+    --color-primary-500: #6750A4;
+    --color-primary-100: #b1aac3;
+
+    --color-success: #28a745;
+    --color-info: #17a2b8;
+    --color-warning: #ffc107;
+    --color-error: #dc3545;
+
+    --color-text-level-0: var(--color-neutral-900); /* 본문, 제목 */
+    --color-text-level-1: var(--color-neutral-700); /* 부제목, 메타데이터 */
+    --color-text-level-2: var(--color-neutral-500); /* 타임스탬프, 보조 정보 */
+    --color-text-level-3: var(--color-neutral-400); /* 가장 옅은 텍스트 */
+    --color-text-base: var(--color-text-level-0); /* 기본 텍스트 색상 */
+    --color-link: var(--color-primary-500); /* 링크 색상 */
+
+    --color-background: var(--color-neutral-50); /* 배경 색상 */
+    --color-surface: var(--color-neutral-100); /* 카드, 모달 등 표면 색상 */
+    --color-border: var(--color-neutral-300); /* 경계선 색상 */
+
+    /* --------------------------------- */
+    /* Spacing
+    /* --------------------------------- */
+    --spacing-ratio: 1.5;
+    --spacing-base: 0.25rem;
+    --spacing-3sm: var(--spacing-base);
+    --spacing-2sm: calc(var(--spacing-3sm) * var(--spacing-ratio));
+    --spacing-sm: calc(var(--spacing-2sm) * var(--spacing-ratio));
+    --spacing-md: calc(var(--spacing-sm) * var(--spacing-ratio));
+    --spacing-lg: calc(var(--spacing-md) * var(--spacing-ratio));
+    --spacing-2lg: calc(var(--spacing-lg) * var(--spacing-ratio));
+    --spacing-3lg: calc(var(--spacing-2lg) * var(--spacing-ratio));
+
+    /* --------------------------------- */
+    /* Border Radius
+    /* --------------------------------- */
+    --radius-ratio: 1.5;
+    --radius-base: 0.25rem;
+    --radius-3sm: var(--radius-base);
+    --radius-2sm: calc(var(--radius-3sm) * var(--radius-ratio));
+    --radius-sm: calc(var(--radius-2sm) * var(--radius-ratio));
+    --radius-md: calc(var(--radius-sm) * var(--radius-ratio));
+    --radius-lg: calc(var(--radius-md) * var(--radius-ratio));
+    --radius-2lg: calc(var(--radius-lg) * var(--radius-ratio));
+    --radius-3lg: calc(var(--radius-2lg) * var(--radius-ratio));
+}
+
+/* --------------------------------- */
+/* Dark Mode Override
+/* --------------------------------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text-level-0: var(--color-neutral-50); /* 본문, 제목 */
+        --color-text-level-1: var(--color-neutral-300); /* 부제목, 메타데이터 */
+        --color-text-level-2: var(--color-neutral-500); /* 타임스탬프, 보조 정보 */
+        --color-text-level-3: var(--color-neutral-700); /* 가장 옅은 텍스트 */
+        --color-text-base: var(--color-text-level-0); /* 기본 텍스트 색상 */
+
+        --color-background: var(--color-neutral-900); /* 배경 색상 */
+        --color-surface: var(--color-neutral-800); /* 카드, 모달 등 표면 색상 */
+        --color-border: var(--color-neutral-700); /* 경계선 색상 */
+    }
+}
