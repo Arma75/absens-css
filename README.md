@@ -37,7 +37,7 @@ absens-css는 현재 **개발 초기 단계 (v0.1.0)**에 있으며, `src/module
 
 ### v0.1.0 남은 작업 목록 (To-Do List)
 - [x] `demo.html` 파일에 주요 시맨틱 HTML 구조 작성
-- [ ] `_variables.css` (공통 변수)
+- [x] `_variables.css` (공통 변수)
 - [ ] `_reset.css` (기본 스타일 초기화)
 - [ ] `_base.css` (전역 기본 스타일)
 - [ ] `_layout.css` (구조 태그)
