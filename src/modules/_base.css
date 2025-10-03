@@ -1,0 +1,34 @@
+html {
+    font-size: var(--font-size-md);
+}
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-base);
+    color: var(--color-text-base);
+    background-color: var(--color-background);
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-neutral-600); 
+    border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-neutral-800);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-background); 
+}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--color-neutral-600) var(--color-background);
+}
