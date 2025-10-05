@@ -47,7 +47,7 @@
 
     --color-background: var(--color-neutral-50); /* 배경 색상 */
     --color-surface: var(--color-neutral-100); /* 카드, 모달 등 표면 색상 */
-    --color-border: var(--color-neutral-300); /* 경계선 색상 */
+    --color-border: var(--color-neutral-200); /* 경계선 색상 */
 
     /* --------------------------------- */
     /* Spacing

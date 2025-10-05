@@ -1,0 +1,38 @@
+header, main, footer, aside {
+    padding: var(--spacing-3lg);
+}
+nav, section, article, figure, fieldset {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--spacing-2lg);
+}
+main {
+    background-color: var(--color-surface);
+}
+
+article, figure, fieldset {
+    background-color: var(--color-background);
+    border-radius: var(--radius-2lg);
+    border: 1px solid var(--color-border); 
+}
+
+section, article, figure, fieldset, form {
+    margin-bottom: var(--spacing-3lg);
+}
+
+main > :last-child,
+section > :last-child,
+article > :last-child,
+fieldset > :last-child,
+figure > :last-child {
+    margin-bottom: 0;
+}
+
+hr {
+    width: 100%; 
+
+    border: none;
+    height: 1px;
+    background-color: var(--color-border);
+}
