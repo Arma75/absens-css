@@ -1,0 +1,71 @@
+/* ------------------------------------------------------------- */
+/* _list.css: 목록 태그 (ul, ol, dl) 스타일
+/* - 리스트의 가독성과 계층 구조를 명확히 합니다.
+/* - 목록 기호를 명확하게 분리하고 리스트 아이템 간의 간격을 조절합니다.
+/* ------------------------------------------------------------- */
+
+/* ============================================================= */
+/* 1. Unordered and Ordered Lists (ul, ol)
+/* ============================================================= */
+
+/* ul, ol 공통 스타일 */
+ul, ol {
+    padding-left: var(--spacing-2lg); /* 목록 기호 공간 확보 */
+}
+
+/* 리스트 항목 (li) */
+li {
+    /* 항목 간 간격 조정 */
+    margin-bottom: var(--spacing-sm);
+    line-height: var(--line-height-base);
+}
+
+/* li의 마지막 요소는 마진 제거 (cleanup) */
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* ul: 비순차 목록 */
+ul {
+    color: var(--color-text-level-1); /* 기호 색상을 본문보다 약간 어둡게 (시각적 분리) */
+}
+
+/* ol: 순차 목록 */
+ol {
+    list-style-type: decimal; /* 아라비아 숫자 기호 */
+}
+
+/* 목록 내부의 목록 (중첩 리스트) */
+ul ul, ol ol {
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ============================================================= */
+/* 2. Definition Lists (dl, dt, dd)
+/* ============================================================= */
+
+/* dl: 정의 목록 (제목-내용 쌍) */
+dl {
+    /* dl 자체는 _typography에서 margin-bottom을 가집니다. */
+}
+
+/* dt: 정의 제목 (Definition Term) */
+dt {
+    font-weight: 700;
+    color: var(--color-text-level-0); /* 본문 텍스트 색상 */
+    margin-top: var(--spacing-md);
+    font-size: var(--font-size-md); /* 일반 텍스트 크기와 동일 */
+}
+
+/* dd: 정의 내용 (Definition Description) */
+dd {
+    margin-left: var(--spacing-lg); /* dt와 시각적 분리 */
+    margin-bottom: var(--spacing-md); /* 다음 정의 쌍과 간격 */
+    color: var(--color-text-level-1); /* 보조 텍스트 색상 사용 */
+}
+
+/* dl의 마지막 dd 요소 마진 제거 */
+dd:last-child {
+    margin-bottom: 0;
+}

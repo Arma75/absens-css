@@ -30,9 +30,12 @@ figure > :last-child {
 }
 
 hr {
-    width: 100%; 
-
     border: none;
-    height: 1px;
+    border-radius: 999em;
     background-color: var(--color-border);
+    height: 8px;
+    width: 100%;
+    max-width: 120px;
+    margin-block-start: var(--spacing-lg);
+    margin-block-end: var(--spacing-lg);
 }
