@@ -1,4 +1,4 @@
-p, blockquote, ul, ol, dl, pre, address, hr, figure, form, fieldset, legend {
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, address, figcaption, legend, code {
     margin-bottom: var(--spacing-md);
 }
 
@@ -116,11 +116,35 @@ a:focus-visible {
 /* - 리스트, 인용구, 코드 블록 등이 article/section의 마지막 자식일 때 마진 제거
 /* ============================================================= */
 
-/* 주요 텍스트 컨테이너의 마지막 직계 자식 마진 제거 */
-main > :last-child, 
-section > :last-child, 
-article > :last-child, 
-blockquote > :last-child,
-figure > :last-child {
+
+* > h1:first-child,
+* > h2:first-child,
+* > h3:first-child,
+* > h4:first-child,
+* > h5:first-child,
+* > h6:first-child,
+* > p:first-child,
+* > blockquote:first-child,
+* > pre:first-child,
+* > address:first-child,
+* > figcaption:first-child,
+* > legend:first-child,
+* > code:first-child {
+    margin-top: 0;
+}
+
+* > h1:last-child,
+* > h2:last-child,
+* > h3:last-child,
+* > h4:last-child,
+* > h5:last-child,
+* > h6:last-child,
+* > p:last-child,
+* > blockquote:last-child,
+* > pre:last-child,
+* > address:last-child,
+* > figcaption:last-child,
+* > legend:last-child,
+* > code:last-child {
     margin-bottom: 0;
 }

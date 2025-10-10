@@ -1,0 +1,228 @@
+/* ------------------------------------------------------------- */
+/* _form.css: 폼 요소 (input, button, select, textarea) 스타일
+/* - 사용 편의성, 접근성, 일관된 Soft UI 디자인에 중점을 둡니다.
+/* ------------------------------------------------------------- */
+
+/* ============================================================= */
+/* 1. Common Input Fields (텍스트 입력 및 선택 요소 공통)
+/* ============================================================= */
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="reset"]):not([type="button"]),
+textarea,
+select {
+    /* 기본 레이아웃 및 디자인 */
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg); /* 넉넉한 클릭/터치 공간 */
+    margin-bottom: var(--spacing-md);
+
+    /* Soft UI 비주얼 */
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    
+    /* 텍스트 색상 */
+    color: var(--color-text-level-0);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* 포커스 상태: 접근성 강화 */
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="reset"]):not([type="button"]):focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    border-color: var(--color-primary-500);
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 1px;
+}
+
+/* 비활성화 상태 */
+input:disabled, textarea:disabled, select:disabled {
+    background-color: var(--color-neutral-100);
+    color: var(--color-text-level-2);
+    cursor: not-allowed;
+    border-style: dashed;
+}
+
+/* Placeholder 스타일 */
+::placeholder {
+    color: var(--color-text-level-2);
+    opacity: 1; 
+}
+
+
+/* ============================================================= */
+/* 2. Textarea (텍스트 영역)
+/* ============================================================= */
+
+textarea {
+    resize: vertical; /* 수직 리사이즈만 허용 */
+    min-height: 5rem;
+}
+
+
+/* ============================================================= */
+/* 3. Buttons (버튼)
+/* ============================================================= */
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    /* Button Base Styles (기본 스타일) */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: var(--spacing-md); /* 줄 바꿈 요소 간 간격 */
+}
+
+/* 3.1. Default Button (기본 버튼: Secondary 역할) */
+button:not([data-primary]),
+input[type="button"],
+input[type="reset"] {
+    background-color: var(--color-neutral-100);
+    color: var(--color-text-level-0);
+    border: 1px solid var(--color-border);
+
+    /* Hover State */
+    &:hover {
+        background-color: var(--color-neutral-200);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+}
+
+/* 3.2. Primary Button (주 버튼: data-primary 속성 사용) */
+/* ** absens-css의 유일한 속성 선택자 사용: 시맨틱 태그만으로는 중요도 구분이 어려워 data-primary 속성으로 강조를 허용함. */
+button[data-primary],
+input[type="submit"] {
+    background-color: var(--color-primary-600);
+    color: var(--color-neutral-50); /* 흰색 텍스트 */
+    border: 1px solid var(--color-primary-600);
+    box-shadow: 0 2px 4px rgba(var(--color-primary-rgb), 0.3);
+
+    /* Hover State */
+    &:hover {
+        background-color: var(--color-primary-700);
+        border-color: var(--color-primary-700);
+        box-shadow: 0 3px 6px rgba(var(--color-primary-rgb), 0.4);
+    }
+}
+
+/* 3.3. Disabled Button */
+button:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="button"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+/* ============================================================= */
+/* 4. Checkbox & Radio (체크박스 및 라디오 버튼)
+/* ============================================================= */
+
+/* 사용자 지정 스타일을 위해 기본 브라우저 스타일 제거 */
+input[type="checkbox"], 
+input[type="radio"] {
+    /* 브라우저 기본 스타일을 숨기거나 최소화 */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: var(--spacing-sm);
+    vertical-align: middle;
+    cursor: pointer;
+    
+    background-color: var(--color-background);
+    border: 2px solid var(--color-neutral-300);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+}
+
+/* 체크박스 고유 스타일 */
+input[type="checkbox"] {
+    border-radius: var(--radius-sm);
+}
+
+/* 라디오 버튼 고유 스타일 */
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+/* Checked State (선택됨) */
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    background-color: var(--color-primary-600);
+    border-color: var(--color-primary-600);
+}
+
+/* 체크 표시 시각화 (간단한 디자인) */
+input[type="checkbox"]:checked {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.5 12.75l6 6 9-13.5' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 라디오 버튼 선택 표시 */
+input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--color-neutral-50); /* 흰색 점 */
+    margin: 0.22rem auto;
+}
+
+/* 포커스 상태 */
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 3px; 
+}
+
+
+/* ============================================================= */
+/* 5. Label (레이블)
+/* ============================================================= */
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: var(--spacing-2sm);
+    color: var(--color-text-level-1);
+}
+
+/* 레이블과 함께 배치되는 체크/라디오 박스 */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-bottom: var(--spacing-md);
+}
+
+
+/* ============================================================= */
+/* 6. Trailing Margin Cleanup (폼 요소 마진 정리)
+/* ============================================================= */
+
+/* 폼 요소가 폼의 마지막 직계 자식일 때 마진 제거 */
+form > :last-child {
+    margin-bottom: 0 !important;
+}
+
+/* 필드세트 내부의 마지막 요소 마진 정리 */
+fieldset > :last-child {
+    margin-bottom: 0 !important;
+}
