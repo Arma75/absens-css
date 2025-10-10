@@ -8,6 +8,7 @@ body {
     color: var(--color-text-base);
     background-color: var(--color-background);
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
