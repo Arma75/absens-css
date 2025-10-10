@@ -41,7 +41,7 @@ absens-css는 현재 **개발 초기 단계 (v0.1.0)**에 있으며, `src/module
 - [x] `_reset.css` (기본 스타일 초기화)
 - [x] `_base.css` (전역 기본 스타일)
 - [x] `_layout.css` (구조 태그)
-- [ ] `_typography.css` (텍스트 및 링크 태그)
+- [x] `_typography.css` (텍스트 및 링크 태그)
 - [ ] `_list.css` (목록 태그)
 - [ ] `_form.css` (폼 요소)
 - [ ] `_media.css` (미디어 태그)

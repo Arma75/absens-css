@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="absens-css: A classless CSS framework focused on readability and soft design. Demo page for v0.1.0 development.">
+    <meta name="keywords" content="classless css, css framework, absens-css, semantic html, soft ui, accessibility">
+    <meta name="author" content="absens-css Dev Team">
+    
+    <title>absens-css v0.1.0 Demo</title>
+    
+    <link rel="stylesheet" href="../src/absens-css.css">
+
+    <style>
+        main {
+            background-color: #191b1f;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        #cameraSection {
+            position: relative;
+            width: calc(100% - 80px);
+            height: calc(100% - 80px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #topLeftBorder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10vw;
+            height: 10vw;
+            border-top: 5px solid white;
+            border-left: 5px solid white;
+            box-sizing: border-box;
+        }
+        #topRightBorder {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10vw;
+            height: 10vw;
+            border-top: 5px solid white;
+            border-right: 5px solid white;
+            box-sizing: border-box;
+        }
+        #bottomLeftBorder {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 10vw;
+            height: 10vw;
+            border-bottom: 5px solid white;
+            border-left: 5px solid white;
+            box-sizing: border-box;
+        }
+        #bottomRightBorder {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 10vw;
+            height: 10vw;
+            border-bottom: 5px solid white;
+            border-right: 5px solid white;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="cameraSection">
+            <div id="topLeftBorder"></div>
+            <div id="topRightBorder"></div>
+            <div id="bottomLeftBorder"></div>
+            <div id="bottomRightBorder"></div>
+        </section>
+    </main>
+</body>
+</html>

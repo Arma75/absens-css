@@ -1,0 +1,126 @@
+p, blockquote, ul, ol, dl, pre, address, hr, figure, form, fieldset, legend {
+    margin-bottom: var(--spacing-md);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--color-text-level-0);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* h1: 가장 큰 타이틀 (페이지 제목, main/header에서 사용) */
+h1 {
+    font-size: var(--font-size-6lg);
+}
+
+/* h2: 메인 섹션 제목 (section에서 주로 사용) */
+h2 {
+    font-size: var(--font-size-5lg);
+}
+
+/* h3: 서브 섹션 제목 (article/card 내의 대주제) */
+h3 {
+    font-size: var(--font-size-4lg);
+}
+
+/* h4: 소제목, 작은 섹션 구분 */
+h4 {
+    font-size: var(--font-size-3lg);
+}
+
+/* h5, h6: 카드 내부의 미묘한 계층 구분 */
+h5 {
+    font-size: var(--font-size-2lg);
+}
+h6 {
+    font-size: var(--font-size-lg);
+}
+
+/* Blockquote: 인용구 스타일 */
+blockquote {
+    border-left: 4px solid var(--color-primary-300);
+    padding-left: var(--spacing-lg);
+    margin-left: 0;
+    font-style: italic;
+    color: var(--color-text-level-1);
+}
+
+/* Figcaption & Legend: 보조 텍스트 (이전에 layout에서 제외됨) */
+figcaption, legend {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-level-1); /* 부제목 색상 사용 */
+    line-height: 1.4;
+    font-weight: 500; 
+}
+
+/* Legend: fieldset의 제목 역할을 위한 추가 스타일 */
+legend {
+    font-weight: 700;
+    padding: 0;
+}
+
+/* Small, Time, Address: 메타데이터 및 보조 정보 */
+small, time, address {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-level-1);
+    font-style: normal; /* address의 이탤릭 제거 */
+    display: inline-block;
+}
+
+/* Preformatted Text / Code Block */
+pre {
+    background-color: var(--color-neutral-200);
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+}
+
+/* Inline Code */
+code {
+    background-color: var(--color-neutral-200);
+    padding: 0.1em 0.3em;
+    border-radius: var(--radius-3sm);
+    font-weight: 600;
+}
+
+
+/* ============================================================= */
+/* 4. Links (링크)
+/* ============================================================= */
+
+a {
+    color: var(--color-primary-600);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-primary-700);
+    text-decoration-color: var(--color-primary-700);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* ============================================================= */
+/* 5. Trailing Margin Cleanup (텍스트 요소 마진 정리)
+/* - 리스트, 인용구, 코드 블록 등이 article/section의 마지막 자식일 때 마진 제거
+/* ============================================================= */
+
+/* 주요 텍스트 컨테이너의 마지막 직계 자식 마진 제거 */
+main > :last-child, 
+section > :last-child, 
+article > :last-child, 
+blockquote > :last-child,
+figure > :last-child {
+    margin-bottom: 0;
+}
