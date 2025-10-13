@@ -29,9 +29,29 @@
     --color-neutral-700: #52525b;
     --color-neutral-800: #3f3f46;
     --color-neutral-900: #27272a;
+    /* Primary Color Scale */
+    --color-primary-50:  #f0ecf6;  /* 가장 밝은 배경 (Lightest) */
+    --color-primary-100: #d0c5e3;
+    --color-primary-200: #b1aac3; /* (기존 100을 200으로 이동) */
+    --color-primary-300: #9987bb;
+    --color-primary-400: #7d6ba8;
+    --color-primary-500: #6750A4;  /* 기본 Primary (Base) */
+    --color-primary-600: #55408a;  /* Hover/Active용 */
+    --color-primary-700: #42306d;
+    --color-primary-800: #3a2b6a;
+    --color-primary-900: #271d4a;  /* 가장 어두운 텍스트/표면 (Darkest) */
 
-    --color-primary-500: #6750A4;
-    --color-primary-100: #b1aac3;
+    /* Destructive (Reset/Error) Color Scale */
+    --color-destructive-50:  #fdebeb; /* 가장 밝은 배경 (Lightest) */
+    --color-destructive-100: #f7b7b1;
+    --color-destructive-200: #f49791;
+    --color-destructive-300: #eb7167;
+    --color-destructive-400: #e05247;
+    --color-destructive-500: #dc3545; /* (기존 --color-error 값 사용) 기본 Destructive */
+    --color-destructive-600: #c12b3c;  /* Hover/Active용 */
+    --color-destructive-700: #a32230;
+    --color-destructive-800: #841b27;
+    --color-destructive-900: #551119;  /* 가장 어두운 텍스트/표면 (Darkest) */
 
     --color-success: #28a745;
     --color-info: #17a2b8;
