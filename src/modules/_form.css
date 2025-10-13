@@ -63,7 +63,6 @@ textarea {
 /* 3. Buttons (버튼)
 /* ============================================================= */
 
-button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
@@ -81,7 +80,6 @@ input[type="button"] {
 }
 
 /* 3.1. Default Button (기본 버튼: Secondary 역할) */
-button:not([data-primary]),
 input[type="button"],
 input[type="reset"] {
     background-color: var(--color-neutral-100);
@@ -97,7 +95,6 @@ input[type="reset"] {
 
 /* 3.2. Primary Button (주 버튼: data-primary 속성 사용) */
 /* ** absens-css의 유일한 속성 선택자 사용: 시맨틱 태그만으로는 중요도 구분이 어려워 data-primary 속성으로 강조를 허용함. */
-button[data-primary],
 input[type="submit"] {
     background-color: var(--color-primary-600);
     color: var(--color-neutral-50); /* 흰색 텍스트 */
@@ -113,7 +110,6 @@ input[type="submit"] {
 }
 
 /* 3.3. Disabled Button */
-button:disabled,
 input[type="submit"]:disabled,
 input[type="reset"]:disabled,
 input[type="button"]:disabled {
