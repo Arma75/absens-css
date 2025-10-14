@@ -12,13 +12,13 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 18px;
-    height: 18px;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--color-neutral-600); 
     border-radius: var(--radius-sm);
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -26,10 +26,19 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-background); 
+    background: transparent;
 }
 
 * {
     scrollbar-width: auto;
-    scrollbar-color: var(--color-neutral-600) var(--color-background);
+}
+
+::selection {
+    background: var(--color-neutral-800);
+    color: var(--color-neutral-50);
+}
+/* Firefox 호환성 (구형 브라우저 지원용) */
+::-moz-selection {
+    background: var(--color-neutral-800);
+    color: var(--color-neutral-50);
 }

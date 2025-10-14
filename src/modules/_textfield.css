@@ -1,0 +1,47 @@
+
+
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="reset"]):not([type="button"]),
+textarea {
+    /* 기본 레이아웃 및 디자인 */
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-md);
+
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    transition: all 0.1s ease-in-out;
+
+    margin-bottom: var(--spacing-md);
+}
+textarea {
+    min-height: 8.4em;
+    resize: none;
+}
+
+/* 사용불가 */
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="reset"]):not([type="button"]):disabled,
+textarea:disabled {
+    cursor: not-allowed;
+    background-color: var(--color-neutral-200);
+    border-color: var(--color-neutral-300); 
+    color: var(--color-neutral-500);
+    opacity: 0.8;
+    box-shadow: none;
+}
+
+/* 마우스 오버 */
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="reset"]):not([type="button"]):hover:not(:disabled),
+textarea:hover:not(:disabled) {
+    background-color: var(--color-background);
+    border-color: var(--color-neutral-300);
+    box-shadow: 0 2px 4px #00000008;
+}
+
+/* Focus 상태 (탭으로 접근) */
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="reset"]):not([type="button"]):focus-visible:not(:disabled),
+textarea:focus-visible:not(:disabled) {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-neutral-400);
+    box-shadow: 0 0 4px var(--color-neutral-400);
+}
