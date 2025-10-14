@@ -1,7 +1,10 @@
 /* ============================================================= */
 /* 일반 버튼 스타일 */
 /* ============================================================= */
-button {
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -11,11 +14,14 @@ button {
     cursor: pointer;
     background-color: var(--color-neutral-100);
     border: 1px solid var(--color-border);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 /* 사용불가 */
-button:disabled {
+button:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled {
     cursor: not-allowed;
     background-color: var(--color-neutral-200);
     border-color: var(--color-neutral-300); 
@@ -24,22 +30,31 @@ button:disabled {
     box-shadow: none;
 }
 
-/* Focus 상태 (탭으로 접근) */
-button:focus-visible:not(:disabled) {
-    background-color: var(--color-neutral-200);
-    border: 1px solid var(--color-neutral-400); /* 짙은 색으로 테두리 강조 */
-    box-shadow: 0 0 4px var(--color-neutral-400); /* 외부 링 효과 추가 */
-}
-
 /* 마우스 오버 */
-button:hover:not(:disabled) {
+button:hover:not(:disabled),
+input[type="button"]:hover:not(:disabled),
+input[type="submit"]:hover:not(:disabled),
+input[type="reset"]:hover:not(:disabled) {
     background-color: var(--color-neutral-100);
     border-color: var(--color-neutral-300);
     box-shadow: 0 2px 4px #00000008;
 }
 
+/* Focus 상태 (탭으로 접근) */
+button:focus-visible:not(:disabled),
+input[type="button"]:focus-visible:not(:disabled),
+input[type="submit"]:focus-visible:not(:disabled),
+input[type="reset"]:focus-visible:not(:disabled) {
+    background-color: var(--color-neutral-200);
+    border: 1px solid var(--color-neutral-400); /* 짙은 색으로 테두리 강조 */
+    box-shadow: 0 0 4px var(--color-neutral-400); /* 외부 링 효과 추가 */
+}
+
 /* 눌리는 효과 */
-button:active:not(:disabled) {
+button:active:not(:disabled),
+input[type="button"]:active:not(:disabled),
+input[type="submit"]:active:not(:disabled),
+input[type="reset"]:active:not(:disabled) {
     background-color: var(--color-neutral-200);
     border-color: var(--color-neutral-300);
     box-shadow: none;
@@ -49,33 +64,38 @@ button:active:not(:disabled) {
 /* ============================================================= */
 /* submit 버튼 스타일 */
 /* ============================================================= */
-button[type="submit"] {
+button[type="submit"],
+input[type="submit"] {
     color: var(--color-primary-50);
     background-color: var(--color-primary-500);
     border: 1px solid var(--color-primary-600);
 }
 
 /* 사용불가 */
-button[type="submit"]:disabled {
+button[type="submit"]:disabled,
+input[type="submit"]:disabled {
     background-color: var(--color-primary-200);
     border-color: var(--color-primary-300);
 }
 
+/* 마우스 오버 */
+button[type="submit"]:hover:not(:disabled),
+input[type="submit"]:hover:not(:disabled) {
+    background-color: var(--color-primary-600);
+    border-color: var(--color-primary-800);
+}
+
 /* Focus 상태 (탭으로 접근) */
-button[type="submit"]:focus-visible:not(:disabled) {
+button[type="submit"]:focus-visible:not(:disabled),
+input[type="submit"]:focus-visible:not(:disabled) {
     background-color: var(--color-primary-600);
     border: 1px solid var(--color-primary-800); /* 짙은 색으로 테두리 강조 */
     box-shadow: 0 0 4px var(--color-primary-900); /* 외부 링 효과 추가 */
 }
 
-/* 마우스 오버 */
-button[type="submit"]:hover:not(:disabled) {
-    background-color: var(--color-primary-600);
-    border-color: var(--color-primary-800);
-}
-
 /* 눌리는 효과 */
-button[type="submit"]:active:not(:disabled) {
+button[type="submit"]:active:not(:disabled),
+input[type="submit"]:active:not(:disabled) {
     background-color: var(--color-primary-700);
     border-color: var(--color-primary-900);
 }
@@ -83,29 +103,33 @@ button[type="submit"]:active:not(:disabled) {
 /* ============================================================= */
 /* reset 버튼 스타일 */
 /* ============================================================= */
-button[type="reset"] {
+button[type="reset"],
+input[type="reset"] {
     color: var(--color-destructive-50);
     background-color: var(--color-destructive-500);
     border: 1px solid var(--color-destructive-600);
 }
 
 /* 사용불가 */
-button[type="reset"]:disabled {
+button[type="reset"]:disabled,
+input[type="reset"]:disabled {
     background-color: var(--color-destructive-200);
     border-color: var(--color-destructive-300);
 }
 
+/* 마우스 오버 */
+button[type="reset"]:hover:not(:disabled),
+input[type="reset"]:hover:not(:disabled) {
+    background-color: var(--color-destructive-600);
+    border-color: var(--color-destructive-800);
+}
+
 /* Focus 상태 (탭으로 접근) */
-button[type="reset"]:focus-visible:not(:disabled) {
+button[type="reset"]:focus-visible:not(:disabled),
+input[type="reset"]:focus-visible:not(:disabled) {
     background-color: var(--color-destructive-600);
     border: 1px solid var(--color-destructive-800); /* 짙은 색으로 테두리 강조 */
     box-shadow: 0 0 4px var(--color-destructive-900); /* 외부 링 효과 추가 */
-}
-
-/* 마우스 오버 */
-button[type="reset"]:hover:not(:disabled) {
-    background-color: var(--color-destructive-600);
-    border-color: var(--color-destructive-800);
 }
 
 /* 눌리는 효과 */

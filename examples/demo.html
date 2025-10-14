@@ -18,6 +18,7 @@
         <nav>
             <ul>
                 <li><a href="#">홈</a></li>
+                <li><a href="#signinSection">회원가입</a></li>
                 <li><a href="#articleExamples1">인터넷 기사/게시글 상세</a></li>
                 <li><a href="#articleExamples2">Company News and Business Article</a></li>
                 <li><a href="#loginForm">로그인 및 인증 폼</a></li>
@@ -43,6 +44,33 @@
     </header>
 
     <main>
+        <section id="signinSection">
+            <h2>회원가입</h2>
+            <article>
+                <form onsubmit="return false;">
+                    <label for="reg-id">아이디</label>
+                    <input type="text" id="reg-id" name="username" placeholder="영문, 숫자 5~20자" required>
+                    
+                    <label for="reg-email">이메일</label>
+                    <input type="email" id="reg-email" name="email" placeholder="example@domain.com" required>
+
+                    <label for="reg-pw">비밀번호</label>
+                    <input type="password" id="reg-pw" name="password" required>
+                    
+                    <label for="warn">경고 메세지</label>
+                    <input type="text" id="warn" placeholder="경고 메세지를 150자 이내로 작성해주세요." disabled>
+                    
+                    <label for="bio">자기소개말 (선택 사항)</label>
+                    <textarea id="bio" placeholder="자신을 소개하는 문구를 150자 이내로 작성해주세요." maxlength="150"></textarea>
+                    
+                    <div>
+                        <input type="submit" value="회원가입">
+                        <input type="reset" value="초기화">
+                    </div>
+                </form>
+            </article>
+        </section>
+
         <section id="articleExamples1">
             <h2>인터넷 기사/게시글 상세</h2>
             <article>
