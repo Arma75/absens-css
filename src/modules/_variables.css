@@ -30,16 +30,16 @@
     --color-neutral-800: #3f3f46;
     --color-neutral-900: #27272a;
     /* Primary Color Scale */
-    --color-primary-50:  #f0ecf6;  /* 가장 밝은 배경 (Lightest) */
-    --color-primary-100: #d0c5e3;
-    --color-primary-200: #b1aac3; /* (기존 100을 200으로 이동) */
-    --color-primary-300: #9987bb;
-    --color-primary-400: #7d6ba8;
-    --color-primary-500: #6750A4;  /* 기본 Primary (Base) */
-    --color-primary-600: #55408a;  /* Hover/Active용 */
-    --color-primary-700: #42306d;
-    --color-primary-800: #3a2b6a;
-    --color-primary-900: #271d4a;  /* 가장 어두운 텍스트/표면 (Darkest) */
+    --color-primary-50:  #e6f9f2;  /* 가장 밝은 배경 (Lightest) */
+    --color-primary-100: #c1f0e0;
+    --color-primary-200: #9de7cc;
+    --color-primary-300: #78decb;
+    --color-primary-400: #4bd2ac;
+    --color-primary-500: #22c784;  /* 기본 Primary (Base) */
+    --color-primary-600: #1a9e6a;  /* Hover/Active용 */
+    --color-primary-700: #137750;
+    --color-primary-800: #0d5b3d;
+    --color-primary-900: #073f2a;  /* 가장 어두운 텍스트/표면 (Darkest) */
 
     /* Destructive (Reset/Error) Color Scale */
     --color-destructive-50:  #fdebeb; /* 가장 밝은 배경 (Lightest) */

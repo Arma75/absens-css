@@ -1,5 +1,5 @@
-@import url("./_button.css");
-@import url("./_textfield.css");
+@import url("./_buttons.css");
+@import url("./_textfields.css");
 
 /* ------------------------------------------------------------- */
 /* _form.css: 폼 요소 (input, button, select, textarea) 스타일

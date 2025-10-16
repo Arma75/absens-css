@@ -1,0 +1,29 @@
+a {
+    color: var(--color-primary-500);
+    transition: all 0.1s ease;
+}
+
+a:hover {
+    color: var(--color-primary-500);
+    
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--color-primary-500);
+}
+
+a:focus-visible {
+    color: var(--color-primary-500);
+    
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--color-primary-500);
+
+    text-shadow: 0 0 1px var(--color-primary-800);
+}
+
+a:visited {
+    color: var(--color-primary-800);
+    text-decoration-color: var(--color-primary-800);
+}
