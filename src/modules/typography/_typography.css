@@ -1,17 +1,9 @@
 @import url("./_headers.css");
 @import url("./_anchors.css");
+@import url("./_mark.css");
 
 p, blockquote, pre, address, figcaption, legend, code {
     margin-bottom: var(--spacing-md);
-}
-
-mark {
-    background-color: var(--color-primary-500);
-    background-color: var(--color-info);
-    color: var(--color-neutral-50);
-    padding: 0 var(--spacing-2sm);
-    margin: 0 var(--spacing-3sm);
-    border-radius: var(--radius-2sm);
 }
 em {
     margin-right: var(--spacing-3sm);
